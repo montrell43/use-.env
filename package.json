@@ -1,5 +1,5 @@
 {
-	"name": "serve-json",
+	"name": "use-.env",
 	"dependencies": {
 		"body-parser": "^2.2.0",
 		"cookie-parser": "^1.4.7",
@@ -14,7 +14,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/montrell43/serve-json.git"
+		"url": "git+https://github.com/montrell43/use-.env.git"
 	},
 	"version": "1.0.0",
 	"description": "This is the boilerplate code for the Managing Packages With npm Challenges. Instructions for working on these challenges start at https://www.freecodecamp.org/learn/back-end-development-and-apis/managing-packages-with-npm/",
@@ -22,7 +22,7 @@
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/montrell43/serve-json/issues"
+		"url": "https://github.com/montrell43/use-.env/issues"
 	},
-	"homepage": "https://github.com/montrell43/serve-json#readme"
+	"homepage": "https://github.com/montrell43/use-.env#readme"
 }
