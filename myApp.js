@@ -1,13 +1,18 @@
+require('dotenv').config();
+
+
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Welcome to the API!');
-});
-
-
 app.get('/json', (req, res) => {
-  res.json({ message: 'Hello json' });
+  let message = 'Hello json';
+  
+  if (process.env.MESSAGE_STYLE === 'uppercase') {
+    message = message.toUpperCase();
+  }
+
+  res.json({ message });
 });
+
 
 module.exports = app;
