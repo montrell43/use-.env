@@ -3,24 +3,18 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path} - ${req.ip}`);
+  next();
 });
-
 
 app.get("/", (req, res) => {
   res.send("Welcome to the homepage!");
 });
 
-
-app.get('/json', (req, res) => {
-  let message = 'Hello json';
-  
-  if (process.env.MESSAGE_STYLE === 'uppercase') {
-    message = message.toUpperCase();
-  }
-
-  res.json({ message });
+app.get("/json", (req, res) => {
+  const msg = process.env.MESSAGE_STYLE === "uppercase" ? "HELLO JSON" : "Hello json";
+  res.json({ message: msg });
 });
 
 module.exports = app;
